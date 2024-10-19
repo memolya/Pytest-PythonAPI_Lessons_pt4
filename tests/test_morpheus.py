@@ -1,12 +1,12 @@
-from utils.api_morpheus import Reqres_api
+from utils.api_morpheus import ReqresApi
 
 """Отправка новых данных"""
-class Test_post_userdata():
+class TestPostUserdata():
 
     def test_post_userdata(self):
 
         print('Метод POST:')
-        result_post = Reqres_api.send_data()
+        result_post = ReqresApi.send_data()
 
         """Проверяем статус-код"""
         print('Статус код: ' + str(result_post.status_code))
