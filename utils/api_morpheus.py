@@ -5,6 +5,8 @@ from utils.http_methods import Http_methods
 base_url = 'https://reqres.in/api/users'
 base_url_2 = 'https://reqres.in/api/register'
 login_url = "https://reqres.in/api/login"
+base_url_3 = "https://reqres.in/api/users/3"
+base_url_4 = "https://reqres.in/api/users/2"
 
 class ReqresApi():
     """Отправка данных"""
@@ -65,3 +67,31 @@ class ReqresLogin_2():
         print(result_post_4.text)
         return result_post_4
 
+"""Для метода PUT"""
+class ReqresUpdate():
+    @staticmethod
+    def update_info():
+        json_put = [
+            {
+                "name": "morpheus",
+                "job": "zion resident"
+            }
+        ]
+        print(base_url_3)
+        result_put = Http_methods.put(base_url_3, json_put)
+        print(result_put.text)
+        return result_put
+
+    """Удаление данных"""
+    @staticmethod
+    def delete_info():
+        json_delete = [
+            {
+                "name": "morpheus",
+                "job": "zion resident"
+            }
+        ]
+        print(base_url_4)
+        result_delete = Http_methods.delete(base_url_4, json_delete)
+        print(result_delete.text)
+        return result_delete

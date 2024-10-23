@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresApi
+from utils.api_morpheus import ReqresApi, ReqresUpdate
 
 """Отправка новых данных"""
 class TestPostUserdata():
@@ -15,3 +15,10 @@ class TestPostUserdata():
         check_post_jsn = result_post.json()  # получать ответ в json формате и значения определенных полей из него
         person_id = check_post_jsn.get('id')
         print('ID type: ', type(person_id))
+
+    def test_delete_data(self):
+
+        print('Метод DELETE:')
+        result_delete = ReqresUpdate.delete_info()
+        print('Статус код: ' + str(result_delete.status_code))
+
