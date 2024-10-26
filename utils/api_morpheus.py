@@ -7,6 +7,8 @@ base_url_2 = 'https://reqres.in/api/register'
 login_url = "https://reqres.in/api/login"
 base_url_3 = "https://reqres.in/api/users/3"
 base_url_4 = "https://reqres.in/api/users/2"
+base_url_5 = "https://catfact.ninja/fact?max_length=100"
+base_url_6 = url = "https://catfact.ninja/facts?max_length=100&limit=5"
 
 class ReqresApi():
     """Отправка данных"""
@@ -95,3 +97,18 @@ class ReqresUpdate():
         result_delete = Http_methods.delete(base_url_4, json_delete)
         print(result_delete.text)
         return result_delete
+
+class ReqresGet():
+    """Получение данных"""
+    @staticmethod
+    def get_data_1():
+        print(base_url_5)
+        result_get = Http_methods.get(base_url_5)
+        print(result_get.text)
+        return result_get
+    @staticmethod
+    def get_data_2():
+        print(base_url_6)
+        result_get_2 = Http_methods.get(base_url_6)
+        print(result_get_2.text)
+        return result_get_2
