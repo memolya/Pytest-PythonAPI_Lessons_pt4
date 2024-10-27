@@ -2,6 +2,7 @@ from utils.api_morpheus import ReqresGet
 import json
 
 class TestGetFields():
+    """Получение содержимого в json ответа"""
     def test_get_fields(self):
         result_get = ReqresGet.get_data_1()
         fields = json.loads(result_get.text)

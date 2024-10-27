@@ -8,7 +8,9 @@ login_url = "https://reqres.in/api/login"
 base_url_3 = "https://reqres.in/api/users/3"
 base_url_4 = "https://reqres.in/api/users/2"
 base_url_5 = "https://catfact.ninja/fact?max_length=100"
-base_url_6 = url = "https://catfact.ninja/facts?max_length=100&limit=5"
+base_url_6 = "https://catfact.ninja/facts?max_length=100&limit=5"
+base_url_7 = "https://dog.ceo/api/breeds/image/random/100"
+base_url_8 = "https://dog.ceo/api/breed/hound/images"
 
 class ReqresApi():
     """Отправка данных"""
@@ -112,3 +114,41 @@ class ReqresGet():
         result_get_2 = Http_methods.get(base_url_6)
         print(result_get_2.text)
         return result_get_2
+    @staticmethod
+    def get_data_3():
+        print(base_url_7)
+        result_get_3 = Http_methods.get(base_url_7)
+        print(result_get_3.text)
+        return result_get_3
+
+    @staticmethod
+    def get_data_4():
+        print(base_url_8)
+        result_get_4 = Http_methods.get(base_url_8)
+        print(result_get_4.text)
+        return result_get_4
+
+class CheckJsonValue():
+    """Метод для проверки длины массива в выбранном поле ответа"""
+
+    @staticmethod
+    def check_json_field_len(result, field_name):
+        counter = 0
+        check = result.json()
+        check_info = check.get(field_name)
+
+        for i in check_info:
+            counter += 1
+        print('Количество элементов в массиве: ' + str(counter))
+
+    """Метод для проверки содержания слова в элементах массива в выбранном поле ответа"""
+    @staticmethod
+    def check_json_element_content(result, field_name, word):
+        counter_2 = 0
+        check = result.json()
+        check_info = check.get(field_name)
+
+        for i in check_info:
+            if word in i:
+                counter_2 += 1
+        print('Количество элементов в массиве с заданным словом: ' + str(counter_2))
