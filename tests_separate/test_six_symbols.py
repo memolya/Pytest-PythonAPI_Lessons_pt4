@@ -1,4 +1,4 @@
-from utils.api_lesson7 import FindSixSymbols
+from utils.api_reqres import FindSixSymbols
 dict = []
 
 """GET поле 6 символов"""

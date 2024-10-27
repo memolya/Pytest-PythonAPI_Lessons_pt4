@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresApi, ReqresUpdate
+from utils.api_reqres import ReqresApi, ReqresUpdate
 
 """Отправка новых данных"""
 class TestPostUserdata():

@@ -12,6 +12,11 @@ base_url_6 = "https://catfact.ninja/facts?max_length=100&limit=5"
 base_url_7 = "https://dog.ceo/api/breeds/image/random/100"
 base_url_8 = "https://dog.ceo/api/breed/hound/images"
 
+url_1 = "https://reqres.in/api/users/7"
+url_2 = "https://reqres.in/api/users?page=2"
+url_3 = "https://reqres.in/api/users/15"
+url_4 = "https://reqres.in/api/unknown/2"
+
 class ReqresApi():
     """Отправка данных"""
 
@@ -152,3 +157,40 @@ class CheckJsonValue():
             if word in i:
                 counter_2 += 1
         print('Количество элементов в массиве с заданным словом: ' + str(counter_2))
+class FindSixSymbols():
+    """Метод для подсчета 6 символов в поле"""
+    @staticmethod
+    def get_six_symbols():
+        print(url_2)
+        result_get_2 = Http_methods.get(url_2)
+        print(result_get_2.text)
+        return result_get_2
+class ReqresStatusCode():
+    """Метод для получения статус-кода"""
+    @staticmethod
+    def get_status_code():
+        print(url_3)
+        result_get_3 = Http_methods.get(url_3)
+        print(result_get_3)
+        return result_get_3
+class ReqresDataFields():
+    """Метод для получения полей data"""
+    @staticmethod
+    def get_data_fields():
+        print(url_4)
+        result_get_4 = Http_methods.get(url_4)
+        print(result_get_4)
+        return result_get_4
+class ReqresApiFirstName():
+    """Метод для отправки GET first name"""
+    @staticmethod
+    def get_first_name():
+        print(url_1)
+        result_get = Http_methods.get(url_1)
+        print(result_get)
+        return result_get
+        # print(result_get.text)
+
+        # check = result_get.json()
+        # check_second_name = check.get(field_name)
+        # print(check_second_name)

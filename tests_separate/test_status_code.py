@@ -1,4 +1,4 @@
-from utils.api_lesson7 import ReqresStatusCode
+from utils.api_reqres import ReqresStatusCode
 
 """Получение статус-кода"""
 class TestGetStatus():
