@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresRegister
+from utils.api_reqres import ReqresRegister
 
 """Отправка кредов"""
 

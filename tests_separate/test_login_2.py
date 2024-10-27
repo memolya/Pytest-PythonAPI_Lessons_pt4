@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresLogin_2
+from utils.api_reqres import ReqresLogin_2
 
 """Логин 2"""
 

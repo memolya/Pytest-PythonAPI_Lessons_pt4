@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresUpdate
+from utils.api_reqres import ReqresUpdate
 
 """Обновление данных"""
 

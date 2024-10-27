@@ -27,6 +27,13 @@ class Checking():
         assert check_info == expected_value
         print(field_name + ' верен.')
 
+    """Метод для проверки значений полей"""
+    @staticmethod
+    def print_json_value(result, field_name):
+        check = result.json()
+        check_info = check.get(field_name)
+        print(check_info)
+
     """Метод для проверки значений полей по заданному слову"""
     @staticmethod
     def check_json_word_in_value(result, field_name, search_word):

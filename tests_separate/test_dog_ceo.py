@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresGet, CheckJsonValue
+from utils.api_reqres import ReqresGet, CheckJsonValue
 import json
 
 class TestBreedsMessage():

@@ -1,4 +1,4 @@
-from utils.api_morpheus import ReqresGet
+from utils.api_reqres import ReqresGet
 import json
 
 class TestGetFields():

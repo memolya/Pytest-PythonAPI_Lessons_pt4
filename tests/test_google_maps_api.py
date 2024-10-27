@@ -1,6 +1,6 @@
 import json
 
-from utils.api import Google_maps_api
+from utils.api_google_maps import Google_maps_api
 from utils.checking import Checking
 
 """Создание, изменение и удаление новой локации"""

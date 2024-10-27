@@ -1,4 +1,4 @@
-from utils.api_lesson7 import ReqresDataFields
+from utils.api_reqres import ReqresDataFields
 
 """Получение количества полей data"""
 
